@@ -9,14 +9,16 @@ namespace :dev do
       show_spinner("Deleting BD...") { `rails db:drop` }
       show_spinner("Creating BD...")   { `rails db:create` }
       show_spinner("Migrating BD...")  { `rails db:migrate` }
-      show_spinner("Registering the default administrator...") { `rails dev:add_default_admin` }
-      show_spinner("Registering extra administrators...") { `rails dev:add_extras_admins` }
-      show_spinner("Registering a default user...") { `rails dev:add_default_user` }
-      show_spinner("Registering default subjects...") { `rails dev:add_subjects` }
-      show_spinner("Registering questions and answers...") { `rails dev:add_answers_and_questions` }
-    else
-      puts "You have to be in a development environment to run these tasks."
     end
+    
+    show_spinner("Registering the default administrator...") { `rails dev:add_default_admin` }
+    show_spinner("Registering extra administrators...") { `rails dev:add_extras_admins` }
+    show_spinner("Registering a default user...") { `rails dev:add_default_user` }
+    show_spinner("Registering default subjects...") { `rails dev:add_subjects` }
+    show_spinner("Registering questions and answers...") { `rails dev:add_answers_and_questions` }
+    # else
+    #   puts "You have to be in a development environment to run these tasks."
+    # end
   end
 
   desc "Add the default administrator"
