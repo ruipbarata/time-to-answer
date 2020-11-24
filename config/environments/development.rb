@@ -7,12 +7,12 @@ Rails.application.configure do
   # Mailtrap config
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-      :user_name => '2509c211ef69d1',
-      :password => 'ed02d8028508d2',
-      :address => 'smtp.mailtrap.io',
-      :domain => 'smtp.mailtrap.io',
-      :port => '2525',
-      :authentication => :cram_md5
+    user_name: "2509c211ef69d1",
+    password: "ed02d8028508d2",
+    address: "smtp.mailtrap.io",
+    domain: "smtp.mailtrap.io",
+    port: "2525",
+    authentication: :cram_md5
   }
 
   # In the development environment your application's code is reloaded on

@@ -10,7 +10,7 @@ namespace :dev do
       show_spinner("Creating BD...")   { `rails db:create` }
       show_spinner("Migrating BD...")  { `rails db:migrate` }
     end
-    
+
     show_spinner("Registering the default administrator...") { `rails dev:add_default_admin` }
     show_spinner("Registering extra administrators...") { `rails dev:add_extras_admins` }
     show_spinner("Registering a default user...") { `rails dev:add_default_user` }

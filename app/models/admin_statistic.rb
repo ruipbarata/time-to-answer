@@ -1,9 +1,9 @@
 class AdminStatistic < ApplicationRecord
 
   EVENTS = {
-      total_users: "TOTAL_USERS",
-      total_questions: "TOTAL_QUESTIONS"
-  }
+    total_users: "TOTAL_USERS",
+    total_questions: "TOTAL_QUESTIONS"
+  }.freeze
 
   scope :total_users, lambda {
     find_by_event(EVENTS[:total_users]).value
