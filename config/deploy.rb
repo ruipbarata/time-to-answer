@@ -6,7 +6,7 @@ set :repo_url, "https://github.com/ruipbarata/timetoanswer.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
-set :branch, 'master'
+set :branch, "master"
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/var/www/timetoanswer"
@@ -42,11 +42,11 @@ set :keep_releases, 5
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
 
-after 'deploy:finished, 'deploy:restart'
+after "deploy:finished", "deploy:restart"
 
 namespace :deploy do
   task :restart do
-    invoke 'unicorn:stop'
-    invoke 'unicorn:start'
+    invoke "unicorn:stop"
+    invoke "unicorn:start"
   end
 end
